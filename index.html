@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <title>May-Portfolio</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<style>
+@media(max-width:500px){
+  #grid{
+    display: block;
+  }
+  #grid ol{
+    border-right:none;
+  }
+  h1{
+    border-bottom:none;
+  }
+}
+
+</style>
+</head>
+<body>
+  <h1><a href="index.html">Portfolio</a></h1>
+
+
+  <input id="day_night" style="position:absolute; left:10px; top:80px;" type="button" value="night" onclick="
+  if(document.querySelector('#day_night').value === 'day') {
+
+  document.querySelector('body').style.backgroundColor = 'white';
+  document.querySelector('body').style.color = 'black';
+  document.querySelector('#day_night').value = 'night'
+
+  var alist = document.querySelectorAll('a');
+  var i = 0;
+  while(i<alist.length){
+    alist[i].style.color='black';
+    i=i+1;
+  }
+} else {
+  document.querySelector('body').style.backgroundColor = 'black';
+  document.querySelector('body').style.color = 'white';
+  document.querySelector('#day_night').value = 'day'
+
+  var alist = document.querySelectorAll('a');
+  var i = 0;
+  while(i<alist.length){
+    alist[i].style.color='white';
+    i=i+1;
+  }
+
+}
+  ">
+
+<div id="grid">
+<ol>
+  <li><a href="1.html" >Profile</a></li>
+  <li><a href="2.html"  id="active">Skill</a></li>
+  <li><a href="3.html">Portfolio</a></li>
+</ol>
+  <div id="article">
+  <img src="https://blogpfthumb-phinf.pstatic.net/MjAxNzExMTBfMTMx/MDAxNTEwMzEzMDcyMjAy.1CIZFF_XvEi24XgelJEF2kOS7xoygOaaja-_Pnbl6twg.yj_R5Hxze-fPh69WKpJBuzDiDN1mQpBKWd3h0uXgAQsg.JPEG.expert_ss/profileImage.jpg?type=w161"><br>
+  <strong>May <u><a href="https://blog.naver.com/expert_ss"
+    target="_blank"title="songhee-portfolio">포트폴리오</a></u></strong> 입니다.
+  </div>
+</div>
+</body>
+</html>
